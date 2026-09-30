@@ -8,8 +8,7 @@ export function CodeTapDetails() {
     <div className="codetap-details">
       <section className="codetap-overview" aria-labelledby="overview-heading">
         <div>
-          <h2 id="overview-heading" className="product-section-title">概要説明</h2>
-          <p className="codetap-headline"><strong>{codetapContent.headline}</strong></p>
+          <h2 id="overview-heading" className="codetap-headline"><strong>{codetapContent.headline}</strong></h2>
           <div className="codetap-prose">
             {codetapContent.overview.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
