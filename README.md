@@ -23,6 +23,14 @@ npm run test:e2e    # Playwright（初回は npx playwright install chromium）
 npm run build       # 本番ビルド
 ```
 
+## GitHub Pages
+
+`main` への push で `.github/workflows/deploy-pages.yml` が Next.js をビルドし、静的出力 `out/` を GitHub Pages に公開します。リポジトリの Settings → Pages → Source は **GitHub Actions** を選択してください。
+
+公開URL：https://m33r-studio.github.io/
+
+`next.config.ts` の `output: "export"` と `trailingSlash: true` により、製品・規約ページも各ディレクトリの `index.html` として生成します。画像は静的ファイルとして配信します。
+
 ## 構成
 
 - `src/app`: ページと共通レイアウト。`/products` 以下に各製品と文書ページがあります。
